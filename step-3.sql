@@ -59,5 +59,5 @@ SELECT reservation_id, site_id, name FROM reservation WHERE site_id IN (9, 20, 2
 -- select the date and number of reservations for each from_date orderd by from_date in ascending order
 SELECT from_date, COUNT(from_date)
 FROM reservation
-GROUP BY reservation_id, from_date --You have to group by reservation_id first or it will only return 25 of the from_date even though all 49 reservations in the table have a from date.
+GROUP BY from_date
 ORDER BY from_date;
